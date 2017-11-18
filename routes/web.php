@@ -11,9 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('login');
+// Route::get('/', function () {
+//     return view('login');
+// });
+
+Route::group(['middleware'=>'auth'], function() {
+    Route::get('/', 'DashboardController@index');
 });
+
 
 Auth::routes();
 

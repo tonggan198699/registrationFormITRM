@@ -8,12 +8,13 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class ShowRegistrationTest extends TestCase
 {
         /** @test */
-    public function user_can_hit_the_url_and_see_the_page()
+    public function user_will_be_relocate_to_login_url_when_not_authenticated()
     {
         $response = $this->get('/');
 
-        $response->assertStatus(200);
-        $response->assertSee("Welcome to the login page");
-        $response->assertDontSee("This is a random page");
+        $response->assertStatus(302);
+        $response->assertDontSee("Welcome to the login page");
+        $this->assertTrue($response->isRedirect(url('login')));
+
     }
 }
