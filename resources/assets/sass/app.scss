@@ -8,7 +8,6 @@
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
-div .input.form-row.form-group{
-  display: flex;
-  justify-content: center;
+.form-control.date {
+  width: 360px;
 }

@@ -8350,12 +8350,7 @@ button.close {
   }
 }
 
-div .input.form-row.form-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.form-control.date {
+  width: 360px;
 }
 

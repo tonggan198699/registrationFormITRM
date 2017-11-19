@@ -4,10 +4,18 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
     use Notifiable;
+
+    const UK_DATE_FORMAT = 'd-m-Y';
+
+    /**
+    * @var array
+    */
+    protected $guarded = [];
 
     /**
      * The attributes that are mass assignable.
@@ -15,7 +23,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'title',
+        'surname',
+        'forename',
+        'dob',
+        'gender',
+        'email',
+        'password',
     ];
 
     /**
@@ -26,4 +40,18 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+    * @return array
+    */
+    public function getDates()
+    {
+        return ['created_at', 'updated_at', 'dob'];
+    }
+
+    public function dob()
+    {
+        return $this->dob ? $this->dob->format(self::UK_DATE_FORMAT) : null;
+    }
+
 }

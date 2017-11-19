@@ -1,4 +1,4 @@
-@extends('app')
+<!-- @extends('app')
 
 @section('content')
 
@@ -19,4 +19,4 @@
             @endif
         </div>
 
-@endsection
+@endsection -->

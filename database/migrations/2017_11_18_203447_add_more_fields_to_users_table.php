@@ -17,7 +17,7 @@ class AddMoreFieldsToUsersTable extends Migration
             $table->enum('title',['mr','mrs','miss','ms','dr'])->after('id');
             $table->string('forename')->nullable()->after('title');
             $table->string('surname')->nullable()->after('forename');
-            $table->date('dob')->after('surname');
+            $table->date('dob')->after('surname')->nullable();
             $table->enum('gender',['male','female'])->after('dob');
         });
     }

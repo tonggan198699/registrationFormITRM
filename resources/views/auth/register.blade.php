@@ -55,7 +55,6 @@
 
                         <div class="form-group">
                           <label for="gender" class="col-md-4 control-label">Gender</label>
-
                           <div class="col-md-6">
                             <select class="form-control" name="gender" id="gender">
                               <option value="male">Male</option>
@@ -64,40 +63,15 @@
                           </div>
                         </div>
 
-                      <div class="input form-row form-group">
-                        <div class="form-group col-md-2">
-                          <label for="dob">Date of birth</label>
-                          <input type="hidden" id="dob" name="dob">
-                              <select id="b-day" class="form-control" name="b-day">
-                                  <option disabled selected value="0">Day</option>
-                                  @for($i = 1; $i <= 31; $i++)
-                                      <option value="{{$i}}">{{$i}}</option>
-                                  @endfor
-                              </select>
-                        </div>
-
-                        <div class="form-group col-md-2">
-                          <label for="b-month">Month</label>
-                            <select id="b-month" class="form-control" name="b-month">
-                                <option disabled selected value="0">Month</option>
-                                @foreach(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] as $key => $month)
-                                    <option value="{{$key + 1}}">{{$month}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-
-                        <div class="form-group col-md-2">
-                          <label for="b-year">Year</label>
-                            <select id="b-year" class="form-control" name="b-year">
-                                <option disabled selected value="0">Year</option>
-                                @for($i = \Carbon\Carbon::now()->subYears(100)->year; $i <= \Carbon\Carbon::now()->year; $i++)
-                                    <option value="{{$i}}">{{$i}}</option>
-                                @endfor
-                            </select>
-                        </div>
+                      <div class="input form-group">
+                        <label for="dob" class="col-md-4 control-label">Date of Birth</label>
+                        <input id="dob" type="date" class="form-control date" name="dob" value="{{ old('dob') }}" required autofocus>
+                           @if ($errors->has('dob'))
+                           <span class="help-block">
+                           <strong>{{ $errors->first('dob') }}</strong>
+                           </span>
+                            @endif
                       </div>
-
-
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
