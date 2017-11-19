@@ -13,7 +13,7 @@ class ApplicationRequiresAuthenticationTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(302);
-        $response->assertDontSee("Welcome to the login page");
+        $response->assertDontSee("You are logged in!");
         $this->assertTrue($response->isRedirect(url('login')));
 
     }
@@ -25,6 +25,7 @@ class ApplicationRequiresAuthenticationTest extends TestCase
 
         $response = $this->get('/home');
         $response->assertStatus(200);
+        $response->assertSee("You are logged in!");
         $this->assertNotNull(auth()->user());
         $this->assertFalse($response->isRedirection());
     }
