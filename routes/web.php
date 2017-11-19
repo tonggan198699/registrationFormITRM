@@ -11,10 +11,6 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('login');
-// });
-
 Route::group(['middleware'=>'auth'], function() {
     Route::get('/', 'DashboardController@index');
 });
@@ -22,3 +18,7 @@ Route::group(['middleware'=>'auth'], function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => 'auth'], function () {
+  Route::get('/details', ['as' => 'details', 'uses' => 'DetailController@index']);
+});

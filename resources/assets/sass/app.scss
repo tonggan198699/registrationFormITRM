@@ -11,3 +11,15 @@
 .form-control.date {
   width: 360px;
 }
+
+.button-wrap
+{
+  text-align: center;
+}
+
+.button-wrap > a
+{
+  position: absolute;
+  top: 86%;
+  right:10%;
+}
