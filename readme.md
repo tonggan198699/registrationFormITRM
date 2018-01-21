@@ -31,3 +31,14 @@ Run the following to run the tests; you should see phpunit output of 1/1 100% su
 	- gender
 -User data should be validated and stored (You choose how the data is stored)
 -User should be able to login after registering, and see their details
+
+#Application pictures
+
+To register
+<p align="center"><img src="https://image.ibb.co/ghTU6w/itrm1.jpg"></p>
+
+After registration
+<p align="center"><img src="https://image.ibb.co/hswfeG/itrm2.jpg"></p>
+
+Simple details page
+<p align="center"><img src="https://image.ibb.co/mWQdYb/itrm3.jpg"></p>
