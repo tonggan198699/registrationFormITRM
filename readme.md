@@ -1,16 +1,16 @@
 ## ITRM registration form 
 
-#Scenario
+## Scenario
 
 You are working in a team of backend developers in a project to build a website for our client, You've been assigned the following task.
 
-#Objective
+## Objective
 
 Use TDD approach to create a simple registration and login form (we use laravel framework in the office, but you are not limited to this)
 
 We have provided a basic test framework which is described in the setup section. You are not limited to this framework.
 
-#Setup
+## Setup
 
 Clone the repository and run from the within the projects base directory
 
@@ -19,7 +19,7 @@ Run the following to run the tests; you should see phpunit output of 1/1 100% su
 
 - ./vendor/bin/phpunit
 
-#Specification
+## Specification
 
 - Users should be able to register by providing the following details
 	- email (required)
@@ -32,7 +32,7 @@ Run the following to run the tests; you should see phpunit output of 1/1 100% su
 -User data should be validated and stored (You choose how the data is stored)
 -User should be able to login after registering, and see their details
 
-#Application pictures
+## Application pictures
 
 To register
 <p align="center"><img src="https://image.ibb.co/ghTU6w/itrm1.jpg"></p>
