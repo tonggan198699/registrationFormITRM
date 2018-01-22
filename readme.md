@@ -34,11 +34,11 @@ Run the following to run the tests; you should see phpunit output of 1/1 100% su
 
 ## Application pictures
 
-To register
+**To register**
 <p align="center"><img src="https://image.ibb.co/ghTU6w/itrm1.jpg"></p>
 
-After registration
+**After registration**
 <p align="center"><img src="https://image.ibb.co/hswfeG/itrm2.jpg"></p>
 
-Simple details page
+**Simple details page**
 <p align="center"><img src="https://image.ibb.co/mWQdYb/itrm3.jpg"></p>
